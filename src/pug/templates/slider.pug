@@ -1,0 +1,14 @@
+- const hello = ["Hello", "world", "ha ha"];
+    - const data = [{name: "Mohit", content: "this is it"}, {name: "Mohit", content: "this is it"}, {name: "Mohit", content: "this is it"}, {name: "Mohit", content: "this is it"}, {name: "Shubham", content: "this is not done"}, {name: "Shivam", content: "this is done but not as we think"}]
+ 
+    //- - for (var i= 0; i<data.length; i++)
+    //-     +galleryBox(data[i].name, data[i].content)
+
+    div.center
+        div.glider-contain
+            div.glider
+                each da in data
+                    +galleryBox(da.name, da.content)
+            button(role="button" aria-label="Previous" class="glider-prev") «
+            button(role="button" aria-label="Next" class="glider-next") »
+            div(role="tablist" class="dots")

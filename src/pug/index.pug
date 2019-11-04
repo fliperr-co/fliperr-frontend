@@ -1,0 +1,13 @@
+
+extends templates/layout
+//- block append config
+//-     - let pageTitles = "Ha Ha"
+
+block main 
+    
+
+mixin galleryBox(heading, content, link)
+    div.main-gallery
+        h1 #{heading}
+        p #{content}
+        a(href="#").button click me #{link}
