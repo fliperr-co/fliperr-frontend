@@ -3,11 +3,35 @@ extends templates/layout
 //- block append config
 //-     - let pageTitles = "Ha Ha"
 
-block main 
+block main
+    section#main.wrapper
+        .video-header
+            .video-header__background
+                //- video(autoplay muted loop id="video")
+                //-     sourc(src="../videos/video.mp4" type="video/mp4")
+                video(src="../videos/video.mp4" autoplay muted loop)
+                
+                .video-content
+                    h1 Death Note
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero autem reiciendis sed quia cumque sequi, laborum quas illum quae?
+                    a(href="#").button Watch Now
+                    a(href="#").button More info
+                .video-overlay
+
+        .popular-animes
+            p popular animes
+        .coming-soon
+            p coming soon
+        .new-episodes
+            p new episodes
+        .latest-news
+            p Latest News
+
+
     
 
-mixin galleryBox(heading, content, link)
-    div.main-gallery
-        h1 #{heading}
-        p #{content}
-        a(href="#").button click me #{link}
+//- mixin galleryBox(heading, content, link)
+//-     div.main-gallery
+//-         h1 #{heading}
+//-         p #{content}
+//-         a(href="#").button click me #{link}
