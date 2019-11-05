@@ -1,0 +1,28 @@
+// footer
+
+.footer
+    width: 100%
+    min-height: 70px
+    text-align: center
+    background-color: $items-background-color
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+    &::before
+        position: absolute
+        content: ''
+        width: 150px
+        height: 100%
+        right: 14%
+        bottom: 30%
+        background: url("../images/logo.svg") no-repeat
+        background-size: 150px
+        @media screen and ( max-width: 800px )
+            display: none
+
+    p
+        color: $headline-color
+        font-size: 0.8rem
+        margin: 0 0 0 0

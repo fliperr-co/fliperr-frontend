@@ -11,12 +11,15 @@
     grid-template-areas: "video_header video_header video_header" "popular_anime popular_anime popular_anime" "new_episodes new_episodes new_episodes" "coming_soon coming_soon coming_soon" "latest_news latest_news latest_news"
     @media screen and ( min-width:  980px)
         grid-template-areas: "video_header video_header new_episodes" "popular_anime popular_anime new_episodes" "popular_anime popular_anime latest_news" "popular_anime popular_anime latest_news" "coming_soon coming_soon comin_soon"
+        margin: 60px auto
 
 // .wrapper
 //     border: 1px solid red
 
 .video-header
     grid-area: video_header
+    @media screen and ( min-width:  980px)
+        margin-right: 20px
     // border: 1px solid red
 
     &__background
@@ -28,6 +31,9 @@
         display: flex
         justify-content: center
         align-items: center
+        @media screen and ( min-width:  980px)
+            height: 400px
+            border-radius: 6px
 
         video
             position: absolute
@@ -44,13 +50,40 @@
                 color: $headline-color
                 font-size: 2rem
                 text-transform: capitalize
+                margin: 0 0 0 0
+                @media screen and ( max-width: 510px )
+                    font-size: 1.5rem
+
             p
                 color: $sub-headline-color
                 margin: 10px 0px 20px 0
+                @media screen and ( max-width: 510px )
+                    font-size: 0.85rem
+
+            .video-button
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 100%
+                margin: 0px auto
 
             .button
+                display: flex
+                svg
+                    margin-left: 5px
                 &:last-child
                     margin-left: 10px
+            @media screen and ( min-width: 300px )
+                .button
+                    padding: 5px 10px
+
+            @media screen and ( min-width:  980px)
+                text-align: left
+                width: 60%
+                margin: 25% auto auto 5%
+
+                .video-button
+                    justify-content: start
         .video-overlay
             position: absolute
             width: 100%
@@ -60,7 +93,12 @@
 
 .popular-animes
     grid-area: popular_anime
-    border: 1px solid red
+    padding: 0px 5%
+    margin: 20px 5% 0px 5%
+    border-radius: 6px
+    background-color: $items-background-color
+    @media screen and ( min-width: 980px )
+        margin: 20px 20px 0 0
 
 .coming-soon
     grid-area: coming_soon
@@ -68,7 +106,27 @@
 
 .new-episodes
     grid-area: new_episodes
-    border: 1px solid red
+    margin: 20px 5% 0px 5%
+    border-radius: 6px
+    background-color: $items-background-color
+    .new-episodes__inner
+        padding: 5%
+        .anime-card
+            .button
+                padding: 8px 20px
+                font-size: 0.7rem
+
+            h1
+                font-size: 0.9rem
+            @media screen and ( min-width: 510px )
+                .button
+                    padding: 5px 8px
+            @media screen and ( max-width: 510px )
+                h1
+                    font-size: 1rem
+
+    @media screen and ( min-width: 980px )
+        margin: 0 0 0 0
 
 .latest-news
     grid-area: latest_news

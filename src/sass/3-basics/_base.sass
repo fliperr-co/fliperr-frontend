@@ -26,3 +26,20 @@ body
 
 section
   display: -webkit-box
+
+.row
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr))
+  width: 100%
+  grid-gap: 20px
+
+  @media (min-width: 510px)
+    display: block
+
+.heading
+  width: 100%
+
+  h1
+    color: $headline-color
+    font-size: 1.5rem
+    text-transform: capitalize

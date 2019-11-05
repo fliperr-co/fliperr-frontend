@@ -7,31 +7,53 @@ block main
     section#main.wrapper
         .video-header
             .video-header__background
-                //- video(autoplay muted loop id="video")
-                //-     sourc(src="../videos/video.mp4" type="video/mp4")
-                video(src="../videos/video.mp4" autoplay muted loop)
+                video(src="../videos/video.mp4" id="hero-video" autoplay muted loop)
                 
                 .video-content
-                    h1 Death Note
-                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero autem reiciendis sed quia cumque sequi, laborum quas illum quae?
-                    a(href="#").button Watch Now
-                    a(href="#").button More info
+                    h1 Death Note (2006)
+                    p A high-school student discovers a supernatural notebook that grants its user the ability to kill.
+                    .video-button
+                        a(href="#").button Watch Now <svg width="22.353" height="22.353" viewBox="0 0 22.353 22.353"><path d="M-8.624-28.947a9.694,9.694,0,0,0,9.676-9.676A9.694,9.694,0,0,0-8.624-48.3,9.694,9.694,0,0,0-18.3-38.624,9.694,9.694,0,0,0-8.624-28.947Zm0-.317a9.356,9.356,0,0,1-9.359-9.359,9.356,9.356,0,0,1,9.359-9.359A9.356,9.356,0,0,1,.735-38.624,9.356,9.356,0,0,1-8.624-29.265Zm-2.665-13.61v8.5l7.043-4.251Zm.317.571,6.123,3.68-6.123,3.68Z" transform="translate(19.8 49.8)" fill="#fff" stroke="#fff" stroke-width="3"/></svg>
+                        a(href="#").button More info
                 .video-overlay
 
         .popular-animes
-            p popular animes
+            .popular-animes__inner
+                .heading
+                    h1 Popular Animes
+                .row 
+                    +cards-generator("../images/image1.jpg", "Death Note (2006)", "Death note a notebook of death", 4, "#")
+                    +cards-generator("../images/image2.png", "Noragami (2018)", "Devil on a killing", 4, "#")
+                    +cards-generator("../images/image3.jpg", "Konosuba (2019)", "konosuba a funny comedy", 4, "#")
+                    +cards-generator("../images/image4.jpg", "Full metal alchemist (2015)", "science fiction", 5, "#")
+                
         .coming-soon
             p coming soon
         .new-episodes
-            p new episodes
+            .new-episodes__inner
+                .heading 
+                    h1 New Episodes
+                .row
+                    +cards-generator("../images/image1.jpg", "Death Note (2006)", "", 4, "#")
+                    +cards-generator("../images/image2.png", "Noragami (2018)", "", 4, "#")
+                    +cards-generator("../images/image3.jpg", "Konosuba (2019)", "", 4, "#")
+                    +cards-generator("../images/image4.jpg", "Full metal alchemist (2015)", "", 5, "#")
+                
         .latest-news
             p Latest News
 
 
-    
 
-//- mixin galleryBox(heading, content, link)
-//-     div.main-gallery
-//-         h1 #{heading}
-//-         p #{content}
-//-         a(href="#").button click me #{link}
+//- Mixins for Cards 
+
+mixin cards-generator(src, name, disc, star, href)
+    .anime-card
+        img(src=src)
+        .anime-card__content
+            h1= name
+            p= disc
+            span 
+                - for(i=0; i<star; i++)
+                    span 
+                        <i class="fas fa-star">
+        a(href=href).button watch Now <svg width="22.353" height="22.353" viewBox="0 0 22.353 22.353"><path d="M-8.624-28.947a9.694,9.694,0,0,0,9.676-9.676A9.694,9.694,0,0,0-8.624-48.3,9.694,9.694,0,0,0-18.3-38.624,9.694,9.694,0,0,0-8.624-28.947Zm0-.317a9.356,9.356,0,0,1-9.359-9.359,9.356,9.356,0,0,1,9.359-9.359A9.356,9.356,0,0,1,.735-38.624,9.356,9.356,0,0,1-8.624-29.265Zm-2.665-13.61v8.5l7.043-4.251Zm.317.571,6.123,3.68-6.123,3.68Z" transform="translate(19.8 49.8)" fill="#fff" stroke="#fff" stroke-width="3"/></svg>

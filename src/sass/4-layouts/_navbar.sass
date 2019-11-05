@@ -10,8 +10,25 @@ nav
 
     .primary-nav
         display: none
+        justify-content: space-around
+        align-items: center
+        flex: 1
+        margin-left: 20px
+        a
+            color: $headline-color
+            margin-left: 25px
+        @media screen and ( min-width: 790px )
+            display: flex
+
     .secondry-nav
         display: none
+
+        .button
+            padding: 5px 20px
+            margin-left: 10px
+        @media screen and ( min-width: 790px )
+            display: flex
+
     .logo
         flex: 1
         img
@@ -80,6 +97,8 @@ nav
         justify-content: flex-end
         margin-top: 15px
         cursor: pointer
+        @media screen and ( min-width: 790px )
+            display: none
 
     .popup-menu
         position: absolute

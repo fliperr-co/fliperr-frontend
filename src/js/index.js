@@ -13,6 +13,10 @@ const popUpMenu = document.querySelector('.popup-menu');
 const subMobileLinkBtn = document.querySelectorAll('.sub-mobile-links');
 const subMobileLink = document.querySelectorAll('.sub-mobile-nav');
 
+//Hero video
+const heroVideo = document.querySelector('#hero-video');
+const videoHeader = document.querySelector('.video-header__background');
+
 searchBtn.addEventListener('click', e => {
   event.preventDefault();
   searchBar.classList.toggle('epand-view');
@@ -35,8 +39,21 @@ closeBtn.addEventListener('click', () => {
 //   console.log('Hello World');
 // });
 
-subMobileLinkBtn.forEach((item, index) => {
-  item.addEventListener('click', () => {
-    subMobileLink[index].classList.toggle('show-mobile-links');
-  });
-});
+// let video = false;
+
+// subMobileLinkBtn.forEach((item, index) => {
+//   item.addEventListener('click', () => {
+//     subMobileLink[index].classList.toggle('show-mobile-links');
+//   });
+// });
+
+// videoHeader.addEventListener('mouseover', () => {
+//   if (!video) {
+//     heroVideo.play();
+//   }
+// });
+// videoHeader.addEventListener('mouseout', () => {
+//   if (video) {
+//     heroVideo.pause();
+//   }
+// });
