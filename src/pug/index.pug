@@ -26,9 +26,12 @@ block main
                     +cards-generator("../images/image2.png", "Noragami (2018)", "Devil on a killing", 4, "#")
                     +cards-generator("../images/image3.jpg", "Konosuba (2019)", "konosuba a funny comedy", 4, "#")
                     +cards-generator("../images/image4.jpg", "Full metal alchemist (2015)", "science fiction", 5, "#")
+                    +cards-generator("../images/image5.jpg", "Konosuba (2019)", "konosuba a funny comedy", 4, "#")
+                    +cards-generator("../images/image6.jpg", "Full metal alchemist (2015)", "science fiction", 5, "#")
                 
         .coming-soon
-            p coming soon
+            include ./templates/slider.pug
+
         .new-episodes
             .new-episodes__inner
                 .heading 
@@ -38,9 +41,29 @@ block main
                     +cards-generator("../images/image2.png", "Noragami (2018)", "", 4, "#")
                     +cards-generator("../images/image3.jpg", "Konosuba (2019)", "", 4, "#")
                     +cards-generator("../images/image4.jpg", "Full metal alchemist (2015)", "", 5, "#")
+                    +cards-generator("../images/image6.jpg", "Full metal alchemist (2015)", "science fiction", 5, "#")
+
                 
         .latest-news
-            p Latest News
+            .latest-news__inner
+                .heading 
+                    h1 Latest News
+                
+                .latest-news__content
+                    ul
+                        li
+                            a(href="#") Attack on titans session 4 is now streaming. 
+                        li
+                            a(href="#") Death note session 2 will come on Tuesday.
+                        li
+                            a(href="#") Mob psycho session 3 will release on Monday.
+                        li
+                            a(href="#") Konosuba english dubbed is here go and watch.
+                        li
+                            a(href="#") Our new website is coming soon please keep on sign up.
+
+                .latest-news__ads
+                    img(src="../images/adds.svg", alt="")
 
 
 

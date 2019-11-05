@@ -1,5 +1,5 @@
 import './views/testView';
-// import './moduls/customGlider';
+import './moduls/customGlider';
 //import { TweenMax, Power2, TimelineLite } from 'gsap/TweenMax';
 
 // Veriables
@@ -12,6 +12,10 @@ const closeBtn = document.querySelector('#close-btn');
 const popUpMenu = document.querySelector('.popup-menu');
 const subMobileLinkBtn = document.querySelectorAll('.sub-mobile-links');
 const subMobileLink = document.querySelectorAll('.sub-mobile-nav');
+
+//Desktop menu
+const desktopBtn = document.querySelectorAll('.desktop-links');
+const desktopNav = document.querySelectorAll('.desktop-nav');
 
 //Hero video
 const heroVideo = document.querySelector('#hero-video');
@@ -34,26 +38,28 @@ closeBtn.addEventListener('click', () => {
   });
 });
 
-// subMobileLinkBtn.addEventListener('click', () => {
-//   subMobileLink.classList.toggle('show-mobile-links');
-//   console.log('Hello World');
-// });
+subMobileLinkBtn.forEach((item, index) => {
+  item.addEventListener('click', () => {
+    subMobileLink[index].classList.toggle('show-mobile-links');
+  });
+});
 
-// let video = false;
+// Desktop
 
-// subMobileLinkBtn.forEach((item, index) => {
-//   item.addEventListener('click', () => {
-//     subMobileLink[index].classList.toggle('show-mobile-links');
-//   });
-// });
+desktopBtn.forEach((btn, index) => {
+  btn.addEventListener('mouseover', e => {
+    desktopNav[index].classList.add('show-mobile-links');
+    desktopNav[index].addEventListener('mouseover', () => {
+      desktopNav[index].classList.add('show-mobile-links');
+    });
+  });
+});
 
-// videoHeader.addEventListener('mouseover', () => {
-//   if (!video) {
-//     heroVideo.play();
-//   }
-// });
-// videoHeader.addEventListener('mouseout', () => {
-//   if (video) {
-//     heroVideo.pause();
-//   }
-// });
+desktopBtn.forEach((btn, index) => {
+  btn.addEventListener('mouseout', e => {
+    desktopNav[index].classList.remove('show-mobile-links');
+    desktopNav[index].addEventListener('mouseout', () => {
+      desktopNav[index].classList.remove('show-mobile-links');
+    });
+  });
+});
