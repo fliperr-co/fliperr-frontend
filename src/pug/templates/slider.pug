@@ -1,15 +1,25 @@
-- const hello = ["Hello", "world", "ha ha"];
-- const data = [{name: "Mohit", content: "this is it"}, {name: "Mohit", content: "this is it"}, {name: "Mohit", content: "this is it"}, {name: "Mohit", content: "this is it"}, {name: "Shubham", content: "this is not done"}, {name: "Shivam", content: "this is done but not as we think"}]
+//- Slider 
 
-//- - for (var i= 0; i<data.length; i++)
-//-     +galleryBox(data[i].name, data[i].content)
+div.glider-contain.multiple
+    div.glider
+        +slider-cards-generator("../images/image1.jpg", "Death Note (2006)", 4)
+        +slider-cards-generator("../images/image2.png", "Death Note (2006)", 2)
+        +slider-cards-generator("../images/image3.jpg", "Death Note (2006)", 4)
+        +slider-cards-generator("../images/image4.jpg", "Death Note (2006)", 5)
+        +slider-cards-generator("../images/image5.jpg", "Death Note (2006)", 3)
+        +slider-cards-generator("../images/image6.jpg", "Death Note (2006)", 1)
+        +slider-cards-generator("../images/image7.jpg", "Death Note (2006)", 3)
+        +slider-cards-generator("../images/image8.jpg", "Death Note (2006)", 5)
+        +slider-cards-generator("../images/image3.jpg", "Death Note (2006)", 3)
+        +slider-cards-generator("../images/image4.jpg", "Death Note (2006)", 4)
+        +slider-cards-generator("../images/image5.jpg", "Death Note (2006)", 4)
+        +slider-cards-generator("../images/image6.jpg", "Death Note (2006)", 3)
+        +slider-cards-generator("../images/image7.jpg", "Death Note (2006)", 5)
+        +slider-cards-generator("../images/image8.jpg", "Death Note (2006)", 1)
+    //- button(role="button" aria-label="Previous" class="glider-prev") «
+    //- button(role="button" aria-label="Next" class="glider-next") »
+    div(role="tablist" class="dots")
 
-div.center
-    div.glider-contain
-        div.glider
-            each n in [1, 2, 3, 4, 5, 6, 7]
-                div
-                    p= n
-        button(role="button" aria-label="Previous" class="glider-prev") «
-        button(role="button" aria-label="Next" class="glider-next") »
-        div(role="tablist" class="dots")
+
+
+        

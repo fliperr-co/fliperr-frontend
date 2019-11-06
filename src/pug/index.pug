@@ -30,7 +30,10 @@ block main
                     +cards-generator("../images/image6.jpg", "Full metal alchemist (2015)", "science fiction", 5, "#")
                 
         .coming-soon
-            include ./templates/slider.pug
+            .coming-soon__inner
+                .heading
+                    h1 Coming Soon
+                include ./templates/slider.pug
 
         .new-episodes
             .new-episodes__inner
@@ -80,3 +83,15 @@ mixin cards-generator(src, name, disc, star, href)
                     span 
                         <i class="fas fa-star">
         a(href=href).button watch Now <svg width="22.353" height="22.353" viewBox="0 0 22.353 22.353"><path d="M-8.624-28.947a9.694,9.694,0,0,0,9.676-9.676A9.694,9.694,0,0,0-8.624-48.3,9.694,9.694,0,0,0-18.3-38.624,9.694,9.694,0,0,0-8.624-28.947Zm0-.317a9.356,9.356,0,0,1-9.359-9.359,9.356,9.356,0,0,1,9.359-9.359A9.356,9.356,0,0,1,.735-38.624,9.356,9.356,0,0,1-8.624-29.265Zm-2.665-13.61v8.5l7.043-4.251Zm.317.571,6.123,3.68-6.123,3.68Z" transform="translate(19.8 49.8)" fill="#fff" stroke="#fff" stroke-width="3"/></svg>
+
+
+mixin slider-cards-generator(src, name, star)
+    .glider-content
+        .slider-anime-card
+            img(src=src)
+            .slider-anime-card__content
+                h1= name
+                span 
+                    - for(i=0; i<star; i++)
+                        span 
+                            <i class="fas fa-star">
