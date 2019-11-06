@@ -95,3 +95,7 @@ mixin slider-cards-generator(src, name, star)
                     - for(i=0; i<star; i++)
                         span 
                             <i class="fas fa-star">
+
+mixin list-generator(text, link)
+    li 
+        a(href=link)= text
