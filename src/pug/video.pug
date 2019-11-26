@@ -7,15 +7,13 @@ block main
     section#main.wrapper
         .video-header
             .video-header__background
-                video(src="../videos/video.mp4" id="hero-video" autoplay muted loop)
-                
-                .video-content
-                    h1 Death Note (2006)
-                    p A high-school student discovers a supernatural notebook that grants its user the ability to kill.
-                    .video-button
-                        a(href="./video.pug").button Watch Now <svg width="22.353" height="22.353" viewBox="0 0 22.353 22.353"><path d="M-8.624-28.947a9.694,9.694,0,0,0,9.676-9.676A9.694,9.694,0,0,0-8.624-48.3,9.694,9.694,0,0,0-18.3-38.624,9.694,9.694,0,0,0-8.624-28.947Zm0-.317a9.356,9.356,0,0,1-9.359-9.359,9.356,9.356,0,0,1,9.359-9.359A9.356,9.356,0,0,1,.735-38.624,9.356,9.356,0,0,1-8.624-29.265Zm-2.665-13.61v8.5l7.043-4.251Zm.317.571,6.123,3.68-6.123,3.68Z" transform="translate(19.8 49.8)" fill="#fff" stroke="#fff" stroke-width="3"/></svg>
-                        a(href="#").button More info
-                .video-overlay
+                video#ipfs-streaming-video.video-js(controls='' data-setup='{}' poster='' preload='auto')
+                    source(src='https://d214al7lhd8c17.cloudfront.net/2d345bd7-0314-4a2d-9227-811df810e8c3/master.m3u8' type='application/x-mpegURL')
+                    p.vjs-no-js
+                        | To view this video please enable JavaScript, and consider upgrading to a web browser that
+                        a(href='https://videojs.com/html5-video-support/' target='_blank') supports HTML5 video
+                        | .
+
 
         .popular-animes
             .popular-animes__inner
@@ -67,8 +65,6 @@ block main
 
                 .latest-news__ads
                     img(src="../images/adds.svg", alt="")
-
-
 
 //- Mixins for Cards 
 
