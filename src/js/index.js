@@ -1,4 +1,4 @@
-import './views/testView';
+import './views/videoPlayer';
 import './moduls/customGlider';
 //import { TweenMax, Power2, TimelineLite } from 'gsap/TweenMax';
 

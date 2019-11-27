@@ -8,7 +8,11 @@ block main
         .video-header
             .video-header__background
                 video#ipfs-streaming-video.video-js(controls='' data-setup='{}' poster='' preload='auto')
-                    source(src='https://d214al7lhd8c17.cloudfront.net/2d345bd7-0314-4a2d-9227-811df810e8c3/master.m3u8' type='application/x-mpegURL')
+                    source(src='https://d214al7lhd8c17.cloudfront.net/70ca5359-6bdc-4715-97eb-e4e28c1e481c/master.m3u8' type='application/x-mpegURL' label="1080P")
+                    source(src='https://d214al7lhd8c17.cloudfront.net/70ca5359-6bdc-4715-97eb-e4e28c1e481c/master.m3u8' type='application/x-mpegURL' label="720P")
+                    source(src='https://d214al7lhd8c17.cloudfront.net/70ca5359-6bdc-4715-97eb-e4e28c1e481c/master.m3u8' type='application/x-mpegURL' label="480P")
+                    source(src='https://d214al7lhd8c17.cloudfront.net/70ca5359-6bdc-4715-97eb-e4e28c1e481c/master.m3u8' type='application/x-mpegURL' label="320P" selected="true")
+                  
                     p.vjs-no-js
                         | To view this video please enable JavaScript, and consider upgrading to a web browser that
                         a(href='https://videojs.com/html5-video-support/' target='_blank') supports HTML5 video
